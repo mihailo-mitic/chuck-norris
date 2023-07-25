@@ -11,12 +11,11 @@ const RandomFact = () => {
             "https://api.chucknorris.io/jokes/random"
           );
           const data = response.data;
-          await setFact(data.value);
+          setFact(data.value);
         } catch (error) {
           console.log(error.response.data);
         }
-      },
-    []
+      }
   );
 
   return (
