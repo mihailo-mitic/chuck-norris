@@ -15,8 +15,7 @@ const RandomFact = () => {
         } catch (error) {
           console.log(error.response.data);
         }
-      },
-    []
+      }
   );
 
   return (
