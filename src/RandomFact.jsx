@@ -11,7 +11,7 @@ const RandomFact = () => {
             "https://api.chucknorris.io/jokes/random"
           );
           const data = response.data;
-          setFact(data.value);
+          await setFact(data.value);
         } catch (error) {
           console.log(error.response.data);
         }
