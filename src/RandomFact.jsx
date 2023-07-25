@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 const RandomFact = () => {
-  const [fact, setFact] = useState("random fact loadin");
+  const [fact, setFact] = useState("random fact loading.....");
   useEffect(
     () =>
       async function fetchData() {
