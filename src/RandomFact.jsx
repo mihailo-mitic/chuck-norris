@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 const RandomFact = () => {
-  const [fact, setFact] = useState("random fact");
+  const [fact, setFact] = useState("random fact loading...");
   useEffect(
     () =>
       async function fetchData() {
@@ -11,8 +11,6 @@ const RandomFact = () => {
             "https://api.chucknorris.io/jokes/random"
           );
           const data = response.data;
-          console.log(response);
-          console.log(data);
           setFact(data.value);
         } catch (error) {
           console.log(error.response.data);
